@@ -83,16 +83,16 @@
             <h1 class="display-2 text-white">La vida es <span style="display:inline; color: orange; font-weight: 800;">HOY</span></h1>
             <p class="text-white mt-0 " style="font-weight: 800;">Encuentra el evento ideal para ti. </p>
             <!-- Busqueda -->
-            <form class="navbar-search navbar-search-dark form-inline  d-none d-md-flex ml-lg-auto" ">
+            <div class="navbar-search navbar-search-dark form-inline  d-none d-md-flex ml-lg-auto" ">
               <div class="form-group mb-0" style="margin: 0 auto">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-search"></i></span>
                   </div>
-                  <input id="busqueda" name="busqueda" class="form-control" placeholder="Buscar" type="text">
+                  <input id="busqueda" name="busqueda" class="form-control" placeholder="Buscar" type="text" onkeypress="return findEvent(event)">
                 </div>
               </div>
-            </form>
+            </div>
             
           </div>
         </div>
@@ -167,6 +167,50 @@
   <script src="{{ asset('assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/base.js') }}"></script>
   <script src="{{ asset('assets/js/script.js') }}"></script>
+  <script>
+  
+  
+/* Se ejecuta busqueda de usuario */
+function findEvent(event){
+	if(event.which == 13 || event.keyCode == 13){
+		let busqueda = document.getElementById('busqueda').value;
+		
+
+
+		// $.ajax({
+		// 	type:'GET',
+		// 	url: '/event/find',
+		// 	// data:{},
+		// 	success:function(data){
+		// 	  data = JSON.parse(data);
+		// 	  console.log(data);
+				
+		// 	},
+		// 	error: function(jqXHR, text, error){
+		// 		alert('No se pudo Añadir los datos<br>' + error);
+		// 	}
+        //   });
+        
+        $.ajax({
+            type:'GET',
+            url: '/event/find',
+            data:{
+                busqueda    :   busqueda,
+            },
+            success: function(respuesta) {
+                console.log(respuesta);
+            },
+            error: function() {
+                console.log("No se ha podido obtener la información");
+                }
+            });
+		
+	}
+	
+}
+
+  
+  </script>
 </body>
 
 </html>
