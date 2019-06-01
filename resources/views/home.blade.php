@@ -31,11 +31,7 @@
   <!-- Navegacion -->
   <nav class="navbar navbar-vertical fixed-left  navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
-      <!-- Toggler Responsive opcion de quitar-->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Brand -->
+      
       <a class="navbar-brand pt-0" href="index.html">
         <img src="assets/img/logo.jpeg" class="navbar-brand-img" alt="...">
       </a>
@@ -65,6 +61,129 @@
       
     </div>
   </nav>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      
+    </nav>
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/fotos/1.jpeg); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid align-items-center">
+        <div class="row">
+          <div class="col-md-12 text-center" style="">
+            <h1 class="display-2 text-white">La vida es <span style="display:inline; color: orange; font-weight: 800;">HOY</span></h1>
+            <p class="text-white mt-0 " style="font-weight: 800;">Encuentra el evento ideal para ti. </p>
+            <!-- Busqueda -->
+            <form class="navbar-search navbar-search-dark form-inline  d-none d-md-flex ml-lg-auto" ">
+              <div class="form-group mb-0" style="margin: 0 auto">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                  <input id="busqueda" name="busqueda" class="form-control" placeholder="Buscar" type="text">
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Page content -->
+    
+
+    <div class="container-fluid mt--7" >
+      <div class="row">
+        <div class="col-xl-12 order-xl-2 mb-5 mb-xl-0" >
+          <div class="card card-profile shadow">
+            
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-info mr-4" style="background: #005854">Novedades</a>
+              </div>
+            </div>
+            <div id="contenedorEventos" class="card-body pt-0 pt-md-4" style="background-color:">
+              <!-- Novedades eventos -->
+              <div class="row" style="background-color: ;">
+                <div class="col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/fotos/2.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Retiro al campo</h5>
+                      <p class="card-text">15/07</p>
+                      <a href="#" class="btn btn-warning">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/fotos/2.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Tai Chi</h5>
+                      <p class="card-text">10/08</p>
+                      <a href="#" class="btn btn-warning">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/fotos/5.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Almuerzo de la confraternidad</h5>
+                      <p class="card-text">11/07</p>
+                      <a href="#" class="btn btn-warning">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/fotos/4.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Premiación Juegos Florales</h5>
+                      <p class="card-text">16/07</p>
+                      <a href="#" class="btn btn-warning">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div> 
+
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              &copy; 2019 <a href="#" class="font-weight-bold ml-1" target="_blank">SAM</a>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank">Quiénes Somos</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank">Nuestros aliados</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div> 
+  </div>
   <!-- Scripts -->
   <script src="{{ asset('assets/lib/jquery/dist/jquery.min.js') }}"></script>
 
