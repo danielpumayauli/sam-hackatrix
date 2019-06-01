@@ -37,7 +37,7 @@
     <div class="container-fluid">
       
       <a class="navbar-brand pt-0" href="/">
-        <img src="assets/img/logo.jpeg" class="navbar-brand-img" alt="...">
+        <img src="{{ asset('assets/img/logo.jpeg') }}" class="navbar-brand-img" alt="...">
       </a>
       <div class="container__web__links">
         <a href="" class="link__header">Quiénes Somos</a>
@@ -80,7 +80,7 @@
       <div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-md-12 text-center" style="">
-            <h1 class="display-2 text-white">La vida es <span style="display:inline; color: orange; font-weight: 800;">HOY</span></h1>
+            <h1 class="display-2 text-white">SOY UN EVENTO {{$code}}</span></h1>
             <p class="text-white mt-0 " style="font-weight: 800;">Encuentra el evento ideal para ti. </p>
             <!-- Busqueda -->
             <div class="navbar-search navbar-search-dark form-inline  d-none d-md-flex ml-lg-auto" ">
@@ -117,18 +117,7 @@
             <div id="contenedorEventos" class="card-body pt-0 pt-md-4" style="background-color:">
               <!-- Novedades eventos -->
               <div class="row" style="background-color: ;">
-                @foreach($events as $event)
-                <div class="col-md-3">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/fotos/2.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">{{$event->name}}</h5>
-                      <p class="card-text">{{$event->fecha}}</p>
-                      <a href="/event/{{ $event->id }}" class="btn btn-warning">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-                @endforeach
+                
                
               </div>
             </div>

@@ -19,7 +19,7 @@ function findEvent(event){
 				// console.log(respuesta,data);
 				if(respuesta != ''){
 					document.getElementById('contenedorEventos').innerHTML = data;
-					// console.log('==========',document.getElementById('contenedorEventos').innerHTML);
+					
 
 				}else{
 					console.log('ocurrio un error, vuelva a intentarlo');

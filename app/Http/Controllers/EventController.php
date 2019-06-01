@@ -49,5 +49,10 @@ class EventController extends Controller
         return $html;
     }
 
+    public function show($code)
+    {
+        return view('event',compact('code'));
+    }
+
     
 }

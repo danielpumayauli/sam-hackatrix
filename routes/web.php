@@ -13,3 +13,5 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('/event/find', 'EventController@find');
+
+Route::get('/event/{code}', 'EventController@show');
