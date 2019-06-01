@@ -21,6 +21,9 @@
       padding: 5px 20px;
       background-color: red;
     }
+    .bg-gradient-default {
+      background: linear-gradient(87deg, rgba(48,181,173,0.5) 0%, rgba(48,181,173,0.5) 99%, rgba(48,181,173,0.36) 100%) !important;
+    }
 
     @media only screen and (max-width: 768px){
       .container__web__links{
