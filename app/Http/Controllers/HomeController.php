@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $events = DB::table('events')->select('name')->get();
+        $events = DB::select("SELECT * FROM events ORDER BY fecha ASC LIMIT 4");
         return view('home',compact('events'));
     }
 }

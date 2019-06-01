@@ -19,7 +19,8 @@
   <style type="text/css">
     .link__header{
       padding: 5px 20px;
-      background-color: red;
+      background-color: #005854;
+      color: white !important;
     }
     .bg-gradient-default {
       background: linear-gradient(87deg, rgba(48,181,173,0.5) 0%, rgba(48,181,173,0.5) 99%, rgba(48,181,173,0.36) 100%) !important;
@@ -35,7 +36,7 @@
   <nav class="navbar navbar-vertical fixed-left  navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
       
-      <a class="navbar-brand pt-0" href="index.html">
+      <a class="navbar-brand pt-0" href="/">
         <img src="assets/img/logo.jpeg" class="navbar-brand-img" alt="...">
       </a>
       <div class="container__web__links">
@@ -116,46 +117,19 @@
             <div id="contenedorEventos" class="card-body pt-0 pt-md-4" style="background-color:">
               <!-- Novedades eventos -->
               <div class="row" style="background-color: ;">
+                @foreach($events as $event)
                 <div class="col-md-3">
                   <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="assets/img/fotos/2.jpeg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Retiro al campo</h5>
-                      <p class="card-text">15/07</p>
-                      <a href="#" class="btn btn-warning">Ver más</a>
+                      <h5 class="card-title">{{$event->name}}</h5>
+                      <p class="card-text">{{$event->fecha}}</p>
+                      <a href="/event/{{ $event->id }}" class="btn btn-warning">Ver más</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/fotos/2.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Tai Chi</h5>
-                      <p class="card-text">10/08</p>
-                      <a href="#" class="btn btn-warning">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/fotos/5.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Almuerzo de la confraternidad</h5>
-                      <p class="card-text">11/07</p>
-                      <a href="#" class="btn btn-warning">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/fotos/4.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Premiación Juegos Florales</h5>
-                      <p class="card-text">16/07</p>
-                      <a href="#" class="btn btn-warning">Ver más</a>
-                    </div>
-                  </div>
-                </div>
+                @endforeach
+               
               </div>
             </div>
             
@@ -192,6 +166,7 @@
 
   <script src="{{ asset('assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/base.js') }}"></script>
+  <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 
 </html>
